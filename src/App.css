@@ -1,0 +1,65 @@
+/* will be for making the website pretty aka the design */
+
+.Logo {
+  width: 250px;
+  height: 80px;
+}
+
+/* this is for the background of the navbar */
+.bg-light {
+  background-color: silver !important;
+}
+
+/* this is for the search button */
+.btn-outline-success {
+  color: black;
+  border-color: black;
+}
+
+/* the homepage design */
+.homepage {
+  background-color: whitesmoke;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+}
+
+.text-content {
+  text-align: left;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.piano-1 {
+  width: 550px;
+  height: 450px;
+  text-align: auto;
+}
+
+.homepage-2 {
+  background-color: mintcream;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.homepage-3 {
+  font-size: 20px;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.button-about-us {
+  padding-top: 50px;
+}
+
+.musicsheet-canvas {
+  margin-top: -150px;
+  transform: scale(0.7);
+}
+
+.canvas {
+  height: 1200px;
+}
