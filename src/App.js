@@ -6,12 +6,15 @@ import Footer from "./components/footerComponent/footer";
 import Homepage from "./components/pages/Homepage";
 import AboutUs from "./components/pages/AboutUs";
 
+import Router from "./Router";
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Header /> */}
-        <Homepage />
+        {/* <Homepage /> */}
+        {/* <Router /> */}
+        <Header />
         <Footer />
       </div>
     );

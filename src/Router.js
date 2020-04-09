@@ -1,19 +1,13 @@
 import React, { Component } from "react";
-import Logo from "../../../src/jcLogo.png";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  withRouter
-} from "react-router-dom";
-import AboutUs from "../pages/AboutUs";
-import Homepage from "../pages/Homepage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-class Header extends Component {
+import HomePage from "./components/pages/Homepage";
+import AboutUsPage from "./components/pages/AboutUs";
+import Logo from "./jcLogo.png";
+
+export default class RouterComponent extends Component {
   render() {
     return (
-      // will be a navbar
       <Router>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <img className="Logo" src={Logo} alt="Logo" />
@@ -28,7 +22,6 @@ class Header extends Component {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
@@ -97,16 +90,45 @@ class Header extends Component {
         </nav>
 
         <Switch>
-          <Route
-            exact
-            path="/Homepage"
-            component={withRouter(Homepage)}
-          ></Route>
-          <Route path="/AboutUs" component={withRouter(AboutUs)}></Route>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/AboutUs">
+            <AboutUsPage />
+          </Route>
         </Switch>
       </Router>
+
+      //   <Router>
+      //     <div>
+      //       <ul>
+      //         <li>
+      //           <Link to="/">Home</Link>
+      //         </li>
+      //         <li>
+      //           <Link to="/about">About</Link>
+      //         </li>
+      //       </ul>
+
+      //       <hr />
+
+      //       {/*
+      //           A <Switch> looks through all its children <Route>
+      //           elements and renders the first one whose path
+      //           matches the current URL. Use a <Switch> any time
+      //           you have multiple routes, but you want only one
+      //           of them to render at a time
+      //         */}
+      //       <Switch>
+      //         <Route exact path="/">
+      //           <HomePage />
+      //         </Route>
+      //         <Route path="/about">
+      //           <AboutUsPage />
+      //         </Route>
+      //       </Switch>
+      //     </div>
+      //   </Router>
     );
   }
 }
-
-export default Header;
